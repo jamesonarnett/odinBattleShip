@@ -1,0 +1,26 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: rgb(240, 240, 240);
+  background: linear-gradient(
+    90deg,
+    rgb(224, 223, 223) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgb(224, 223, 223, 1) 100%
+  );
+}
+
+.iconPadding {
+  padding: 0rem 0.6rem;
+
+  svg {
+    color: black;
+  }
+}
+
+.anchorDecoration {
+  color: black;
+}
