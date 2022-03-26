@@ -1,29 +1,21 @@
-import { BsGithub } from "react-icons/bs";
 import styles from "../scss/Footer.module.scss";
+import { GitButton } from "./Buttons";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <p>
-        <a
-          className={styles.iconPadding}
-          href="https://github.com/jamesonarnett"
-        >
-          <BsGithub />
-        </a>
+        <GitButton />
         Created by Jameson Arnett for{" "}
         <a
+          target={"_blank"}
           className={styles.anchorDecoration}
           href="https://www.theodinproject.com/"
+          rel="noreferrer"
         >
           The Odin Project
         </a>
-        <a
-          className={styles.iconPadding}
-          href="https://github.com/jamesonarnett"
-        >
-          <BsGithub />
-        </a>
+        <GitButton />
       </p>
     </footer>
   );

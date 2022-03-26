@@ -1,4 +1,4 @@
-const createShip = require("../src/modules/shipFactory");
+const createShip = require("../src/modules/factories/shipFactory");
 
 it("checks proper usage of ship object", () => {
   expect(new createShip("Cruiser", [1, 2, 3, 4])).toEqual({
@@ -10,6 +10,7 @@ it("checks proper usage of ship object", () => {
 
 describe("ship functions", () => {
   let ship1;
+
   it("checks ship is sunk FALSE", () => {
     ship1 = new createShip("Cruiser", [1, 2, 3, 4]);
     expect(ship1.isSunk()).toBe(false);
@@ -34,5 +35,13 @@ describe("ship functions", () => {
     ship1.receivedHit(4);
     ship1.receivedHit(3);
     expect(ship1.isSunk()).toBe(true);
+  });
+
+  it("test hits DO NOT sink ship", () => {
+    ship1 = new createShip("Cruiser", [1, 2, 3, 4]);
+    ship1.receivedHit(1);
+    ship1.receivedHit(4);
+    ship1.receivedHit(3);
+    expect(ship1.isSunk()).toBe(false);
   });
 });

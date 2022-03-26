@@ -1,4 +1,4 @@
-const { equalArray } = require("./utils");
+const { equalArray } = require("../utils");
 
 class createShip {
   constructor(name, length) {
@@ -17,14 +17,6 @@ class createShip {
   }
   isSunk() {
     return equalArray(this.length, this.hits) ? true : false;
-
-    // if (this.length === this.hits) {
-    //   return true;
-    // } else {
-    //   return false;
-    // }
-    //param length
-    // return isArrayAllSameValue(length) ? true : false;
   }
 }
 
