@@ -1,11 +1,33 @@
+const _ = require("lodash");
+const createShip = require("./shipFactory");
+
 class GameBoard {
-  constructor(gridSize) {
-    this.gridSize = gridSize;
-    //... they will both be the same size, unsure here for now
+  gameBoardArray = [];
+
+  constructor(squares) {
+    // for (let i = 0; i <= squares; i++) {
+    //   if (i !== 0) {
+    //     this.gameBoardArray.push(i);
+    //   }
+    // }
+
+    this.gameBoardArray = _.range(1, squares);
+    //lodash does not include last num, use 101 for 100 squares
+    //[1,2,3,4] = ship with 4 length placed horizontally on first row
+    //[1,11,21,31] = ship with 4 length placed vertically on first column
   }
 
-  //place ships at specific coords within gameboard
-  //recieveAttack takes coords to determine hits
-  //keep track of misses && display
-  //check loss here????
+  placeShip(name, location) {
+    return new createShip(name, location);
+
+    //
+  }
+
+  recieveHit(index) {}
+
+  recieveMiss(index) {}
+
+  checkLoss() {}
 }
+
+module.exports = GameBoard;
