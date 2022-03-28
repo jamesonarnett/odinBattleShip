@@ -2,7 +2,7 @@ const { equalArray } = require("../utils");
 
 class createShip {
   constructor(name, length) {
-    //length is position???
+    //length is position
     //length = []
     this.name = name;
     this.length = length;
