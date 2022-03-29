@@ -1,7 +1,7 @@
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsPlayFill } from "react-icons/bs";
 import styles from "../scss/Buttons.module.scss";
 
-export const GitButton = () => {
+export const GitBtn = () => {
   return (
     <a
       target={"_blank"}
@@ -12,4 +12,8 @@ export const GitButton = () => {
       <BsGithub />
     </a>
   );
+};
+
+export const PlayBtn = () => {
+  return <BsPlayFill />;
 };

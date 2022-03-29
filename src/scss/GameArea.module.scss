@@ -1,0 +1,13 @@
+.gameArea {
+  display: flex;
+  justify-content: center;
+}
+
+.gameBoardOne,
+.gameBoardTwo {
+  padding: 1rem;
+  margin: 5rem 1rem;
+  width: 25vw;
+  height: 30vh;
+  background-color: white;
+}

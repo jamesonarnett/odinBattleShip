@@ -1,11 +1,11 @@
 import styles from "../scss/Footer.module.scss";
-import { GitButton } from "./Buttons";
+import { GitBtn } from "./Buttons";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <p>
-        <GitButton />
+        <GitBtn />
         Created by Jameson Arnett for{" "}
         <a
           target={"_blank"}
@@ -15,7 +15,7 @@ const Footer = () => {
         >
           The Odin Project
         </a>
-        <GitButton />
+        <GitBtn />
       </p>
     </footer>
   );

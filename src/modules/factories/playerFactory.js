@@ -1,9 +1,8 @@
 const GameBoard = require("./boardFactory");
 
 class Player {
-  constructor(name, isTurn) {
+  constructor(name) {
     this.name = name;
-    //isTurn?
     this.ships = [];
     this.board = new GameBoard(101);
   }
