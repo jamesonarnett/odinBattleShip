@@ -5,9 +5,8 @@ class Player {
     this.name = name;
     //isTurn?
     this.ships = [];
-    this.gameBoard = new GameBoard();
+    this.board = new GameBoard(101);
   }
-  //need to involve some sort of isTurn/state
   //AI needs to be able to make legal moves
 
   _computerMove() {}

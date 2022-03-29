@@ -1,5 +1,16 @@
+const GameBoard = require("../src/modules/factories/boardFactory");
 const Player = require("../src/modules/factories/playerFactory");
 
 describe("Player functions", () => {
-  it("checks proper creation of player object", () => {});
+  let player = new Player("Jameson", true);
+
+  it("checks proper creation of player object", () => {
+    expect(player).toEqual(
+      expect.objectContaining({
+        name: "Jameson",
+        ships: [],
+        board: new GameBoard(101),
+      })
+    );
+  });
 });
