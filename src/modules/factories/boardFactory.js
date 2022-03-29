@@ -7,8 +7,8 @@ class GameBoard {
   constructor(squares) {
     this.gameBoardArray = _.range(0, squares);
     //lodash does not include last num, use 101 for 100 squares
-    //[1,2,3,4] = ship with 4 length placed horizontally on first row
-    //[1,11,21,31] = ship with 4 length placed vertically on first column
+    //[0,1,2,3] = ship with 4 length placed horizontally on first row
+    //[0,10,20,30] = ship with 4 length placed vertically on first column
   }
 
   placeShip(name, location) {
@@ -18,6 +18,7 @@ class GameBoard {
 
   recieveHit(index) {
     if (this.gameBoardArray.includes(index)) {
+      //needs to check if ship is in location
       this.gameBoardArray[index] = "x";
       //mark ship hit in shipFactory?
       //update DOM to include marker for hit
@@ -25,7 +26,13 @@ class GameBoard {
     }
   }
 
-  recieveMiss(index) {}
+  recieveMiss(index) {
+    if (this.gameBoardArray.includes(index)) {
+      //needs to check if ship is in location
+      this.gameBoardArray[index] = "";
+    }
+    return this.gameBoardArray;
+  }
 
   checkLoss() {}
 }

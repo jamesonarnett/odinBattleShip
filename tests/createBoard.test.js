@@ -29,7 +29,21 @@ describe("board functions", () => {
     ]);
   });
 
-  it("checks gameboard recieves MISS", () => {});
+  it("checks gameboard recieves MISS", () => {
+    expect(new GameBoard(11).recieveMiss(0)).toStrictEqual([
+      "",
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+    ]);
+  });
 
   it("checks gameboard if ship is SUNK", () => {});
 });
