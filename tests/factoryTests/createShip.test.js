@@ -1,4 +1,4 @@
-const createShip = require("../src/modules/factories/shipFactory");
+const createShip = require("../../src/modules/factories/shipFactory");
 
 it("checks proper usage of ship object", () => {
   expect(new createShip("Cruiser", [1, 2, 3, 4])).toEqual({

@@ -1,5 +1,5 @@
-const GameBoard = require("../src/modules/factories/boardFactory");
-const Player = require("../src/modules/factories/playerFactory");
+const GameBoard = require("../../src/modules/factories/boardFactory");
+const Player = require("../../src/modules/factories/playerFactory");
 
 describe("Player functions", () => {
   let player = new Player("Jameson");

@@ -1,4 +1,4 @@
-const GameBoard = require("../src/modules/factories/boardFactory");
+const GameBoard = require("../../src/modules/factories/boardFactory");
 
 describe("board functions", () => {
   it("should produce a gameboard 10x1/10squares", () => {
