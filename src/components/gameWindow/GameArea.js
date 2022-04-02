@@ -1,4 +1,4 @@
-import styles from "../scss/GameArea.module.scss";
+import styles from "../../scss/GameArea.module.scss";
 
 const GameArea = () => {
   return (

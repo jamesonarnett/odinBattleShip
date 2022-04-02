@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  label {
+    color: white;
+    padding: 0.5rem;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+
+  input {
+    font-size: 24px;
+    border-radius: 5px;
+    margin: 0.2rem 0.3rem;
+  }
+}
+
+.btnFlip {
+  font-size: 20px;
+  opacity: 1;
+  outline: 0;
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+.btnFlip:hover {
+  cursor: pointer;
+}
+.btnFlip:hover:after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+.btnFlip:hover:before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+.btnFlip:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  color: rgba(9, 9, 121, 1);
+  display: block;
+  transition: 0.5s;
+  position: absolute;
+  content: attr(data-back);
+  transform: translateY(-50%) rotateX(90deg);
+}
+.btnFlip:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: #adadaf;
+  display: block;
+  padding: 0 30px;
+  line-height: 40px;
+  transition: 0.5s;
+  position: relative;
+  background: #323237;
+  content: attr(data-front);
+  transform: translateY(0) rotateX(0);
+}

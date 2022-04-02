@@ -11,13 +11,37 @@
     color: white;
     margin-bottom: 0.1rem;
     letter-spacing: -1px;
+    margin-right: 0.5rem;
   }
 }
 
 .gameBoardOne,
 .gameBoardTwo {
   margin: 0rem 1rem;
-  width: 25vw;
-  height: 30vh;
+
   background-color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  .gameBoardOne,
+  .gameBoardTwo {
+    width: 30vw;
+    height: 40vh;
+  }
+}
+
+// @media only screen and (max-width: 800px) {
+//   .gameBoardOne,
+//   .gameBoardTwo {
+//     width: 40vw;
+//     height: 40vh;
+//   }
+// }
+
+@media only screen and (min-width: 800px) {
+  .gameBoardOne,
+  .gameBoardTwo {
+    width: 40vw;
+    height: 50vh;
+  }
 }
