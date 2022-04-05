@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "./components/Header";
 import TextBox from "./components/TextBox";
 import GameArea from "./components/gameWindow/GameArea";
