@@ -12,7 +12,6 @@ const StartScreen = () => {
     e.preventDefault();
 
     setName(name.trim());
-    console.log(name);
 
     if (!name.trim()) {
       throw new Error("Name required");
@@ -21,7 +20,7 @@ const StartScreen = () => {
     if (name.trim().length > 15) {
       throw new Error("Name too long");
     }
-    //more to come here setError state?
+    //more to come here || setError state?
   };
 
   return (
